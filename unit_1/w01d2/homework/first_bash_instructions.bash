@@ -69,3 +69,47 @@
 # Return "**x_wing**" and the "**millenium_falcon**" to "**yavin_4**".
 
 # Celebrate!
+
+Cd Desktop
+Mkdir galaxy_far_far_away death_star
+Touch darth_vadar.txt princess_leia.txt storm_trooper.txt
+Cd galaxy_far_far_away
+Mkdir Tatooine
+Cd Tatooine
+Touch Luke.txt ben_kenobi.txt
+Mkdir millenium_falcon
+Cd millenium_falcon
+Touch han_solo.txt Chewbacca.txt
+Mv ben_kenobi.txt/ obi_wan.txt
+Cp storm_trooper.txt/ Tatooine
+Cd ..
+Mv Luke.txt obi_wan.txt ../millenium_falcon
+Mv millenium_falcon galaxy_far_far_away
+Mv millenium falcon death_star
+Mv princess_leia.txt ../ millenium_falcon
+Rm obi_wan.txt
+Cd ../..
+Mkdir yavin_4
+Mv millenium_falcon yavin_4
+Cd yavin_4
+Mkdir x_wing
+Mv princess_leia.txt ../yavin_4
+Mv Luke.txt ../ x_wing
+Mv millenium_falcon galaxy_far_far_away
+Mv x_wing galaxy_far_far_away
+Cd ..
+Cd death_star
+Mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+Mv darth_vadar.txt ../ tie_fighter_1
+Cp storm_trooper.txt ../ tie_fighter_2 tie_fighter_3
+Mv tie_fighter_1 galaxy_far_far_away
+Mv tie_fighter_2 galaxy_far_far_away
+Mv tie_fighter_3 galaxy_far_far_away
+Rm tie_fighter_2 tie_fighter_3
+Cd ../
+Cd x_wing
+Touch the_force.txt
+Cd ..
+Rm death_star
+Mv x_wing yavin_4
+Mv millenium_falcon yavin_4
