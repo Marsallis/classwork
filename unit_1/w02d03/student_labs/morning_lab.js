@@ -54,17 +54,18 @@
 
 // countdown(6);
 
-const getMultipleLengths = (arrayOfStrings) => {
+// const getMultipleLengths = (arrayOfStrings) => {
 
-    let arrayStringLength = [];
+//     let arrayStringLength = [];
 
-    for (let i = 0; i < arrayOfStrings.length; i++ ) {
+//     for (let i = 0; i < arrayOfStrings.length; i++ ) {
 
-    arrayStringLength.push(arrayOfStrings[i].length);
+//     arrayStringLength.push(arrayOfStrings[i].length);
 
-    }
-    return arrayStringLength;
+//     }
+//     return arrayStringLength;
 
-}
+// }
 
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
