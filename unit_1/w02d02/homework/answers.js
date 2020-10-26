@@ -188,4 +188,6 @@
 //     return nums.length % 2 !== 0 ? nums2[mid] : (nums2[mid -1] + nums2[mid]) / 2;
 // };
 
+//Link that helped me was https://www.w3resource.com/javascript-excersizes/fundamental/javascript-fundamental-excersise-88.php
+
 // console.log(median(nums))
