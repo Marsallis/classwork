@@ -182,7 +182,6 @@
 
 // const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12, 17, 12, 71, 18, 15, 12]
 
-
 // const median = nums => {
 //     const mid = Math.floor(nums.length / 2);
 //     nums2 = [...nums].sort((a, b) => a - b);
