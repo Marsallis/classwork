@@ -15,6 +15,10 @@ header {
     height: 80px;
     width: 1000px;
     max-width: 1000px;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> ca3c90c6a7a7ce8db47f81f37be3fe8e6111056c
 }
 .bigText  {
     color: white;
@@ -29,7 +33,12 @@ header {
     font-family: 'Inter', sans-serif;
     margin-left: 20px;
     padding-bottom: 40px;
+<<<<<<< HEAD
 } 
+=======
+}
+
+>>>>>>> ca3c90c6a7a7ce8db47f81f37be3fe8e6111056c
  .middleSection {
     position: relative;
     display: inline-block;
@@ -78,7 +87,11 @@ img {
 .middleButtons:hover {
     background-color: #f5f5f5;
  }
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> ca3c90c6a7a7ce8db47f81f37be3fe8e6111056c
 hr {
     border: 1px solid lightgray;
 }
@@ -106,4 +119,8 @@ footer {display: inline-block;
     color: black;
     font-size: 15px;
     font-weight: 400;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ca3c90c6a7a7ce8db47f81f37be3fe8e6111056c
