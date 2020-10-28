@@ -4,7 +4,7 @@ while (imAwake){
     console.log("I am awake");
     count++;
     console.log("the hour is" + " " + count);
-    if(count <= 24) {
+    if(count <= 24){
         continue;
     }
     isAwake = false;
