@@ -11,8 +11,7 @@ class alienShip {
     this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10;
 }
 }
-console.log(new alienShip())
-Collapse
+
 
 
 
