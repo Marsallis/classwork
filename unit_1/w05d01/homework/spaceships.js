@@ -1,11 +1,6 @@
 alert('Quick! Aliens are attacking Earth, we must act now!');
 prompt('Would you like to ATTACK the aliens and defened your planet, or RETREAT?')
-let action = null 
-if (action === 'retreat') {
-    console.log('You retreated and let Earth be destroyed!')
-}else{
-    attackAlien();
-}
+
 // Make a USS Ruth class
 class ussRuth {
     constructor(){
@@ -24,12 +19,12 @@ class Ship {
     }
     createShip(i){
         const newShip = new Ship(i);
-        this.ships.push(newShip);
+        push(Ship);
     }
 }
 //Make remaining ships and the attacking ship
-const USS = new Ruth();
-const alienShip = new Alien();
+const USS = new ussRuth();
+const alienShip = new Ship();
 alienShip.createShip(1);
 alienShip.createShip(2);
 alienShip.createShip(3);
@@ -57,11 +52,19 @@ let attackUSS = function() {
 }
 // function to attack next ship after first is destroyed
 let nextMove = function() {
-    if (alienShip.ships[letAttackingShip].hull > 0 && attackingShip > 6 {
+    if (alienShip.ships[letAttackingShip].hull > 0 && attackingShip > 6) {
         attackAlien();
     } else {
         console.log('You destroyed all the alien ships, great job!!!')
     }
+}
+
+
+let action = null 
+if (action === 'retreat') {
+    console.log('You retreated and let Earth be destroyed!')
+}else{
+    attackAlien();
 }
 
 
