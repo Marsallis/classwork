@@ -99,9 +99,12 @@ $Shire.append($hobbits);
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+  const $theRing = $('<div>').attr('id', 'the-ring');
 
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
+  const Frodo = document.getElementsByClassName(hobbits[0]);
+  $Frodo.append($theRing);
 
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
@@ -116,10 +119,15 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+  const $baddiesList = $('<ul>');
 
   // 2. give each of the baddies a class of "baddy"
+  for (i = 0; i < baddies.length; i++){
+    let $badHobbit = $('<li>').addClass('baddy').text(baddies[i]);
+    $baddieslist.append($badHobbit);
 
   // 3. remember to append the ul to Mordor
+  $('#Mordor').append($baddiesList);
 
 };
 
@@ -132,12 +140,20 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
+  const $buddies2 = $('<aside>');
+  $('#middle-earth').append($buddies2);
 
   // 2. display an unordered list of buddies in the aside
+  const $buddiesList = $('<ul>').attr('id', 'buddies-list')
+
 
   // 3. give each of the buddies a class of "buddy"
+  for ( i = 0; i < buddies.length; i ++){
+    let $buddy = $('<li>').addClass('buddy').text(buddies[i]);
+    $buddiesList.append($buddy);
 
   // 4. don't forget to append them to the aside
+  $buddies2.append($buddiesList);
 
 };
 
