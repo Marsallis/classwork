@@ -160,4 +160,11 @@ ul {
     top: 385px;
   }
 
+  .the-white {
+    background-color: white;
+    border: grey;
+  }
+
+}
+
 }
