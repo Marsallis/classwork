@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+    background-color: rgba(71, 117, 211, 0.4)
+  }
+  button {
+    background-color: red;
+    color: white;
+  }
+  completed {
+    background-color: red;
+    color: white;
+    font-family: 'Sansita Swashed', cursive;
+  }
+  #lists {
+  display: flex;
+  justify-content: space-around;
+  }
+  input {
+    font-weight: bolder;
+  }
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  h3 {
+    opacity: 0.3;
+  }
+  
