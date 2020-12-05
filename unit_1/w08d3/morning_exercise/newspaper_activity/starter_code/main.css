@@ -1,0 +1,150 @@
+/********************************** 
+General
+*********************************/
+body {
+  background-color: snow;
+  font-size: .7em;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color:  #212F3C;
+  margin: auto;
+  border-radius: 2%;
+  border: 5px dotted black;
+}
+
+.wrapper {
+    background-color:  #212F3C;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/********************************** 
+Newspaper details
+*********************************/
+h1, h3 {
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Fascinate Inline', cursive;
+}
+
+h3 {
+  max-width: 15%;
+  border: 1px solid black;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .95em;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
+
+h2 {
+  text-align: center;
+  margin: 2px;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  text-align: justify;
+}
+
+p:first-child:first-letter {
+  color: red;
+}
+
+
+.size-in {
+  transform: scale(1);
+  animation: size-in 3s 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/********************************** 
+Add animations here
+*********************************/
+
+.newspaper {
+  animation-name: newsPaper;
+  animation-duration: 1.5s;
+  background-color: white;
+  transform: scale(1);
+
+
+}
+
+  @keyframes newsPaper {
+    0% {transform: scale(.01) rotate(0deg);}
+    2% {transform: scale(.02) rotate(45deg);}
+    4% {transform: scale(.04) rotate(90deg);}
+    6% {transform: scale(.06) rotate(135deg);}
+    8% {transform: scale(.08) rotate(180deg);}
+    10% {transform: scale(.10) rotate(225deg);}
+    12% {transform: scale(.12) rotate(270deg);}
+    14% {transform: scale(.14) rotate(315deg);}
+    16% {transform: scale(.16) rotate(360deg);}
+    18% {transform: scale(.18) rotate(405deg);}
+    20% {transform: scale(.20) rotate(450deg);}
+    22% {transform: scale(.22) rotate(495deg);}
+    24% {transform: scale(.24) rotate(540deg);}
+    26% {transform: scale(.26) rotate(585deg);}
+    28% {transform: scale(.28) rotate(630deg);}
+    30% {transform: scale(.30) rotate(675deg);}
+    32% {transform: scale(.32) rotate(720deg);}
+    34% {transform: scale(.34) rotate(765deg);}
+    36% {transform: scale(.36) rotate(810deg);}
+    38% {transform: scale(.38) rotate(855deg);}
+    40% {transform: scale(.40) rotate(900deg);}
+    42% {transform: scale(.42) rotate(945deg);}
+    44% {transform: scale(.44) rotate(990deg);}
+    46% {transform: scale(.46) rotate(1035deg);}
+    48% {transform: scale(.48) rotate(1080deg);}
+    50% {transform: scale(.50) rotate(1125deg);}
+    52% {transform: scale(.52) rotate(1170deg);}
+    54% {transform: scale(.54) rotate(1215deg);}
+    56% {transform: scale(.56) rotate(1260deg);}
+    58% {transform: scale(.58) rotate(1305deg);}
+    60% {transform: scale(.60) rotate(1350deg);}
+    62% {transform: scale(.62) rotate(1395deg);}
+    64% {transform: scale(.64) rotate(1440deg);}
+    66% {transform: scale(.66) rotate(1485deg);}
+    68% {transform: scale(.68) rotate(1530deg);}
+    70% {transform: scale(.70) rotate(1575deg);}
+    72% {transform: scale(.72) rotate(1620deg);}
+    74% {transform: scale(.74) rotate(1665deg);}
+    76% {transform: scale(.76) rotate(1710deg);}
+    78% {transform: scale(.78) rotate(1755deg);}
+    80% {transform: scale(.80) rotate(1800deg);}
+    82% {transform: scale(.82) rotate(1845deg);}
+    84% {transform: scale(.84) rotate(1890deg);}
+    86% {transform: scale(.86) rotate(1935deg);}
+    88% {transform: scale(.88) rotate(1980deg);}
+    90% {transform: scale(.90) rotate(2025deg);}
+    92% {transform: scale(.92) rotate(2070deg);}
+    94% {transform: scale(.94) rotate(2115deg);}
+    96% {transform: scale(.96) rotate(2160deg);}
+    98% {transform: scale(.98) rotate(2205deg);}
+    100% {transform: scale(1) rotate(2250deg);}
+  }
