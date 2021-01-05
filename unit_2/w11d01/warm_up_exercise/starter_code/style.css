@@ -3,3 +3,38 @@
   /*margin: 0;*/
   /*padding: 0;*/
 }
+
+header {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+footer h3 {
+  text-align: center;
+
+}
+
+footer ol {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.article1 {
+  float: left;
+  width: 50%;
+}
+
+.article2 {
+  float: right;
+  width: 50%;
+}
