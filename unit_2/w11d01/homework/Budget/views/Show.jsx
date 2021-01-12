@@ -1,8 +1,20 @@
 const React = require('react');
+const Index = require("../views/Index");
+
+const myStyle = {
+    backgroundColor: "red"
+}
 
 class Show extends React.Component {
     render(){
         const budget = this.props.Budget;
+        const amountCheck = (item) => {
+            if(item < 0){
+                return {backgroundColor: "red"}
+            }else if (item >= 1000){
+                return {backgroundColor: "green"}
+            }
+        }
         
         return(
             <html lang="en">
