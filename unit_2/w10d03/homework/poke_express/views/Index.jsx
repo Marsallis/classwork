@@ -1,27 +1,41 @@
-const React = require("react");
-const Layout = require("./Layout.jsx");
-
-
-class Index extends React.Component {
-    render() {
-        const pokemon = this.props.pokemon;
+const nodemon = require('nodemon');
+const React = require('react');
+const pokemon = require('../models/pokemon');
+const myStyle = {
+    color: '#ffffff',
+    backgroundColor: 'lightblue',
+    textAlign: 'center',
+  };
+const textStyle = {
+    textTransform: 'capitalize',
+}
+class Index extends React.Component{
+    render(){
+        const pokes = this.props.pokes;
         return (
-            <Layout>
-                <h1>Pokemon Index Page</h1>
-                <ul>
+            <body style={myStyle}>
+                <h1>Look up all your Pokemon!</h1>
+                <ul style={{ textDecoration: 'numbered' }}>
                     {
-                        pokemon.map((pokemon,index)=> {
-                            return (
-                                <li key={index}>
-                                    The <a href={`/pokemon/${index}`}>{pokemon.name}</a> is {pokemon.color} <br />
-                                    {pokemon.readyToEat ? "Is ready to eat" : "Is not ready to eat"}
+                        pokes.map((pokemon, index)=> {
+                            return(
+                                <li>
+                                    <h1 style={textStyle}><a href={`/pokemon/${index}`}>{pokemon.name}</a></h1>
                                 </li>
                             )
                         })
                     }
+                
                 </ul>
-            </Layout>
+            </body>
         )
     }
 }
+
+
+
+
+
+
+
 module.exports = Index;
