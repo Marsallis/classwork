@@ -6,11 +6,10 @@ const PORT = 3000;
 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
-// look in a directory called public when you see a .js file or a .css file
 app.use(express.static("public"));
 
 app.get('/', (req, res)=>{
-    res.send(`<h1>Welcome to your Basic Pokedex!</h1>`)
+    res.send(`<h1>Welcome to your Pokedex!</h1>`)
 })
 
 //Index Route ///
