@@ -2,6 +2,7 @@
 require('dotenv').config(); // process.env
 const express = require('express');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const app = express();
 const PORT = 3000;
 const Fruit = require('./models/fruit');
@@ -9,10 +10,7 @@ const Fruit = require('./models/fruit');
 // Body Parser Middleware to give us access to req.body
 app.use(express.urlencoded({extended: true})); // form data
 app.use(express.json()); // raw json data
-app.use((req, res, next)=>{
- console.log(req.body)
- next();
-});
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
@@ -44,7 +42,7 @@ app.post('/fruits', (req, res) => {
         if(!failure){
             res
               .status(200)
-              .send(success)
+              .redirect('/fruits')
         } else {
             res
               .status(400)
@@ -89,6 +87,58 @@ app.get('/fruits/:id', (req, res) => {
     })
 })
 
+// DELETE
+
+app.delete('/fruits/:id', (req, res) => {
+    Fruit.findByIdAndDelete(req.params.id, (err, deletedFruit) => {
+        if(!err){
+            res 
+              .status(200)
+              .redirect('/fruits')
+        } else {
+            res
+              .status(400)
+              .send(err)
+        }
+    })
+})
+
+// UPDATE
+
+app.put('/fruits/:id', (req, res) => {
+    req.body.readyToEat === 'on'?
+    req.body.readyToEat = true:
+    req.body.readyToEat = false;
+    Fruit.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err) => {
+        if(!err){
+            res 
+              .status(200)
+              .redirect('/fruits')
+        } else {
+            res
+              .status(400)
+              .send(err)
+        }
+    })
+})
+
+// EDIT
+
+app.get('/fruits/:id/Edit'), (req, res) => {
+    Fruit.findById(req,params,id, (err, foundFruit) => {
+        if(!err){
+            res
+              .status(200)
+              .render('Edit', {
+                  fruit: foundFruit
+              })
+        } else {
+            res
+              .status(400)
+              .send(err)
+        }
+    })
+}
 
 
 
