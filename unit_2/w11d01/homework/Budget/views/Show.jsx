@@ -30,15 +30,15 @@ class Show extends React.Component {
                     <h1>{budget.name}</h1>
                     <button><a href="/budget">Back</a></button>
                     <p><strong>date</strong></p>
-                    <p><blockquote>{budget.date}</blockquote></p>
+                    <p>{budget.date}</p>
                     <p><strong>name</strong></p>
-                    <p><blockquote>{budget.name}</blockquote></p>
+                    <p>{budget.name}</p>
                     <p><strong>from</strong></p>
-                    <p><blockquote>{budget.from}</blockquote></p>
+                    <p>{budget.from}</p>
                     <p><strong>amount</strong></p>
-                    <p><blockquote>{budget.amount}</blockquote></p>
+                    <p>{budget.amount}</p>
                     <p><strong>tags</strong></p>
-                    <p><blockquote>{budget.tags}</blockquote></p>
+                    <p>{budget.tags}</p>
                     
                 </div>
             </body>
