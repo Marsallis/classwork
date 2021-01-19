@@ -9,11 +9,14 @@ class AppLayout extends React.Component {
                         <meta charSet="utf-8"/>
                         {/* This let us dynamically create the title */}
                         <title>{this.props.title}</title>
+                        <link rel="stylesheet" href="/css/main.css"/>
                     </head>
                     <body>
                         <h1>{this.props.title}</h1>
                         {/* This is where our other components will be injected */}
-                        {this.props.children}
+                        <div className={this.props.pageClass}>
+                            {this.props.children}
+                        </div>
                     </body>
             </html>
         )
