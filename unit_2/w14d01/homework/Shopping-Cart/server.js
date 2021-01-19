@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const pokemon = require('./models/pokemon');
+const Products = require('./models/Products');
 const PORT = 3000;
 
 
@@ -13,19 +13,18 @@ app.get('/', (req, res)=>{
 })
 
 //Index Route ///
-app.get('/pokemon', (req, res)=>{
+app.get('/Products', (req, res)=>{
     res.render("Index", {
-        pokes: pokemon
+        prods: Products
             
     })
 })
 
 
 //Show Route ////
-app.get('/pokemon/:indexOfPokemon', (req, res)=> {
-    // res.send(pokemon[req.params.indexOfPokemon]);
+app.get('/Products/:indexOfProducts', (req, res)=> {
     res.render("Show", {
-        pokes: pokemon[req.params.indexOfPokemon]    
+        Prods: Products[req.params.indexOfProducts]    
     })
 })
 
@@ -35,5 +34,5 @@ app.get('/pokemon/:indexOfPokemon', (req, res)=> {
 
 
 app.listen(PORT, ()=>{
-    console.log(`Listening for pokes on port ${PORT}`);
+    console.log(`Listening for Products on port ${PORT}`);
 });
