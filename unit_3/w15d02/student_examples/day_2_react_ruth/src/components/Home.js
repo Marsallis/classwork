@@ -7,7 +7,8 @@ export default function Home(props) {
 	const {
 		value: germanNewCard,
 		bind: bindGermanNewCard,
-		reset: resetGermanNewCard
+		reset: resetGermanNewCard,
+		delete: deleteGermanCard
 	} = useInput('');
 	// Kellie
 	const [kellieList, updateKellieList] = useState([]);
