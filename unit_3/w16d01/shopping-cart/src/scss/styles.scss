@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,900&display=swap');
+@import "reset";
+@import "core/neat";
+@import "product";
+$cna-mq-default-breakpoint: '(max-width: 374.9999999999px)';
+$cna-mq-mobile-breakpoint: '(min-width: 375px)';
+$cna-mq-tablet-breakpoint: '(min-width: 768px)';
+$cna-mq-desktop-breakpoint: '(min-width: 1280px)';
+$cna-mq-large-display-breakpoint: '(min-width: 1920px)';
+$cna-mq-types: (
+  default: 'screen and #{$cna-mq-default-breakpoint}',
+  mobile: 'screen and #{$cna-mq-mobile-breakpoint}',
+  tablet: 'screen and #{$cna-mq-tablet-breakpoint}',
+  desktop: 'screen and #{$cna-mq-desktop-breakpoint}',
+  large-display: 'screen and #{$cna-mq-large-display-breakpoint}'
+);
+$cna-grid-default-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($cna-mq-types, default)
+  }
+);
+$cna-grid-mobile-configuration: (
+  columns: 4,
+  gutter: 1rem,
+  media: #{
+    map-get($cna-mq-types, mobile)
+  }
+);
+$cna-grid-tablet-configuration: (
+  columns: 8,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, tablet)
+  }
+);
+$cna-grid-desktop-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, desktop)
+  }
+);
+$cna-grid-large-display-configuration: (
+  columns: 12,
+  gutter: 1.5rem,
+  media: #{
+    map-get($cna-mq-types, large-display)
+  }
+);
+  $german: #8E6E95;
+  $kellie: #39A59C;
+  $allegra: #344759;
+  $nicole: #E8741E;
+  $width: 100vw;
+  $sizeUnit: 22px;
+  
+body{
+  @include grid-media($cna-grid-default-configuration) {
+    color: black;
+    font-weight: 200;
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin: 24px 16px;
+      div{
+        height: 120px;
+        width: 100%;
+        box-shadow: 4px 8px 16px 8px rgba($kellie, 0.3);
+        &:hover{
+          box-shadow: 8px 16px 32px 8px rgba(red, 0.3) ;
+        }
+      }
+    }
+  }
+  @include grid-media($cna-grid-mobile-configuration) {
+    background-color: $allegra;
+    color: white;
+    font-weight: 700;
+    .container {
+      background-color: black;
+    }
+  }
+  @include grid-media($cna-grid-tablet-configuration) {
+    background-color: $kellie;
+    color: ghostwhite;
+    font-weight: 200;
+  }
+  @include grid-media($cna-grid-desktop-configuration) {
+    background-color: $german;
+    color: white;
+    font-weight: 400;
+  }
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+h1 {
+  font-weight: 100;
+  font-size: $sizeUnit * 2;
+  width: $width;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  .Aligner {
+    min-height: 85vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .Aligner-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .menu ul li {
+    padding: 10px 15px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .version-num {
+    background: #E8E8E8;
+    border-radius: 4px;
+    padding: 7px 15px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 0 20px;
+  }
+  a {
+    text-decoration: none;
+    color: #30395C;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #43D4D6;
+  }
+}
+.Page-wrapper{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  .Page {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100vw - 50px);
+    .column {
+      width: 100%;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .heading{
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 0.1px solid transparentize(black, .35);
+        width: 100%;
+      }
+    }
+  }
+  .german{
+    background-color: $german;
+  }
+  .kellie{
+    background-color: $kellie;
+  }
+  .allegra{
+    background-color: $allegra;
+  }
+  .nicole{
+    background-color: $nicole;
+  }
+  button{
+    margin: 3rem auto 0.5rem;
+    background-color: #fEfE95;
+    width: 65%;
+    height: 3rem;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(#8E6E95, 0.2);
+  }
+  .task-form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label{
+      width:100%;
+    }
+    input{
+      margin-left: 1rem;
+    }
+    button{
+      margin: 1rem auto;
+    }
+  }
+  .germanColumn{
+    .task-form{
+      label{
+        display: flex;
+        justify-content: space-between;
+        span{
+        background-color: $german;
+        color: white;
+        display: block;
+        padding: .2rem 1rem;
+      }
+      }
+    }
+  }
+  .kellieColumn{
+    .task-form{
+      label{
+        display: flex;
+        justify-content: space-between;
+        span{
+        background-color: $kellie;
+        color: white;
+        display: block;
+        padding: .2rem 1rem;
+      }
+      }
+    }
+  }
+
+  .allegraColumn{
+    .task-form{
+      label{
+        display: flex;
+        justify-content: space-between;
+        span{
+        background-color: $allegra;
+        color: white;
+        display: block;
+        padding: .2rem 1rem;
+      }
+      }
+    }
+  }
+
+  .nicoleColumn{
+    .task-form{
+      label{
+        display: flex;
+        justify-content: space-between;
+        span{
+        background-color: $nicole;
+        color: white;
+        display: block;
+        padding: .2rem 1rem;
+      }
+      }
+    }
+  }
+}
