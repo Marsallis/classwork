@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faCaretRight,
 	faCaretLeft,
-	faCircle,
+	faCaretRight,
 	faCheckCircle,
+	faCircle,
 	faPlus
 } from '@fortawesome/free-solid-svg-icons';
 export default function App(props) {
@@ -13,9 +13,9 @@ export default function App(props) {
 	]);
 
 	const [inputValue, setInputValue] = useState('');
-	const [itemTotal, setItemTotal] = useState(1);
+	const [totalItems, setTotalItems] = useState(1);
 
-	const addToListButton = () => {
+	const addItemButton = () => {
 		const newItem = {
 			itemName: inputValue,
 			quantity: 1,
@@ -29,7 +29,7 @@ export default function App(props) {
 		calculateTotal();
 	};
 
-	const increaseQuantity = index => {
+	const increaseButton = index => {
 		const newItems = [...items];
 
 		newItems[index].quantity++;
@@ -38,7 +38,7 @@ export default function App(props) {
 		calculateTotal();
 	};
 
-	const decreaseQuantity = index => {
+	const decreaseButton = index => {
 		const newItems = [...items];
 
 		newItems[index].quantity--;
@@ -47,7 +47,7 @@ export default function App(props) {
 		calculateTotal();
 	};
 
-	const puchasedItem = index => {
+	const purchasedItem = index => {
 		const newItems = [...items];
 
 		newItems[index].isSelected = !newItems[index].isSelected;
@@ -56,13 +56,12 @@ export default function App(props) {
 	};
 
 	const calculateTotal = () => {
-		const itemTotal = items.reduce((total, item) => {
-			return total + item.quantity;
+		const totalItems = items.reduce((total, items) => {
+			return total + items.quantity;
 		}, 0);
 
-		setItemTotal(itemTotal);
+		setTotalItems(totalItems);
 	};
-
 	return (
 		<div className="app-background">
 			<div className="main-container">
@@ -74,16 +73,16 @@ export default function App(props) {
 						className="add-item-input"
 						placeholder="Add an item..."
 					/>
-					<FontAwesomeIcon icon={faPlus} onClick={() => addToListButton()} />
+					<FontAwesomeIcon icon={faPlus} onClick={() => addItemButton()} />
 				</div>
 				<div className="item-list">
 					{items.map((item, index) => (
 						<div className="item-container">
-							<div className="item-name" onClick={() => puchasedItem(index)}>
-								{item.isSelected ? (
+							<div className="item-name" onClick={() => purchasedItem(index)}>
+								{items.isSelected ? (
 									<>
 										<FontAwesomeIcon icon={faCheckCircle} />
-										<span className="completed">{item.itemName}</span>
+										<span className="purchased">{item.itemName}</span>
 									</>
 								) : (
 									<>
@@ -96,21 +95,22 @@ export default function App(props) {
 								<button>
 									<FontAwesomeIcon
 										icon={faCaretLeft}
-										onClick={() => decreaseQuantity(index)}
+										onClick={() => decreaseButton(index)}
 									/>
 								</button>
 								<span> {item.quantity} </span>
 								<button>
 									<FontAwesomeIcon
 										icon={faCaretRight}
-										onClick={() => increaseQuantity(index)}
+										onClick={() => increaseButton(index)}
 									/>
+									<span> {items.quantity} </span>
 								</button>
 							</div>
 						</div>
 					))}
 				</div>
-				<div className="total">Total: {itemTotal}</div>
+				<div className="total">Total: {totalItems}</div>
 			</div>
 		</div>
 	);
