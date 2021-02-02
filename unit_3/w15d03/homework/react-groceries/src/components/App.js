@@ -6,33 +6,33 @@ import {
 	faCheckCircle,
 	faCircle,
 	faPlus
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'; 
 export default function App(props) {
 	const [items, setItems] = useState([
-		{ itemName: 'item 1', quantity: 1, isSelected: false }
+		{ itemName: 'item 1', quantity: 1, isSelected: false } //first item in the list that renders with page
 	]);
 
-	const [inputValue, setInputValue] = useState('');
-	const [totalItems, setTotalItems] = useState(1);
+	const [inputValue, setInputValue] = useState(''); //input
+	const [totalItems, setTotalItems] = useState(1); // 1 item will be there when adding a new item
 
 	const addItemButton = () => {
 		const newItem = {
 			itemName: inputValue,
 			quantity: 1,
 			isSelected: false
-		};
+		}; 
 
-		const newItems = [...items, newItem];
+		const newItems = [...items, newItem]; //brings old items in the list with the new item entered when it updates
 
-		setItems(newItems);
-		setInputValue('');
-		calculateTotal();
+		setItems(newItems); //updates list with new item
+		setInputValue(''); // resets input box to empty
+		calculateTotal(); //calculates total of quantity of items
 	};
 
 	const increaseButton = index => {
-		const newItems = [...items];
+		const newItems = [...items]; 
 
-		newItems[index].quantity++;
+		newItems[index].quantity++; // increases the quantity of items in that specific index
 
 		setItems(newItems);
 		calculateTotal();
@@ -41,7 +41,7 @@ export default function App(props) {
 	const decreaseButton = index => {
 		const newItems = [...items];
 
-		newItems[index].quantity--;
+		newItems[index].quantity--; //decreases the quantity of items in that specific index
 
 		setItems(newItems);
 		calculateTotal();
@@ -50,7 +50,7 @@ export default function App(props) {
 	const purchasedItem = index => {
 		const newItems = [...items];
 
-		newItems[index].isSelected = !newItems[index].isSelected;
+		newItems[index].isSelected = !newItems[index].isSelected; //cant get this button to work, my thought process was => when clicked convert it to the opposite of initially selected (which was false)??
 
 		setItems(newItems);
 	};
@@ -58,7 +58,7 @@ export default function App(props) {
 	const calculateTotal = () => {
 		const totalItems = items.reduce((total, items) => {
 			return total + items.quantity;
-		}, 0);
+		}, 0); // calculates total items using reduce method
 
 		setTotalItems(totalItems);
 	};
